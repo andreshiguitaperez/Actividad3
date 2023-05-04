@@ -1,0 +1,6 @@
+projectKey=co.udea.hero.api:tour-hero-api
+serverUrl=http://localhost:9000
+serverVersion=10.0.0.68432
+dashboardUrl=http://localhost:9000/dashboard?id=co.udea.hero.api%3Atour-hero-api
+ceTaskId=AYd5MIWEYMcBMGN3RUWg
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYd5MIWEYMcBMGN3RUWg
