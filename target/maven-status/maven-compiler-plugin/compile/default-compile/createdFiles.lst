@@ -1,0 +1,6 @@
+co\udea\hero\api\model\Hero.class
+co\udea\hero\api\controller\HeroController.class
+co\udea\hero\api\service\IHeroService.class
+co\udea\hero\api\repository\HeroRepository.class
+co\udea\hero\api\TourHeroApiApplication.class
+co\udea\hero\api\service\HeroService.class
