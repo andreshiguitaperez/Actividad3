@@ -43,7 +43,7 @@ pipeline {
                 ],
                 credentialsId: 'nexusCredentials',
                 groupId: 'co.udea.hero.api',
-                nexusUrl: 'efe5-181-128-31-248.ngrok-free.app',
+                nexusUrl: '6a86-181-128-31-248.ngrok-free.app',
                 nexusVersion: 'nexus3',
                 protocol: 'https',
                 repository: 'app-prueba',
