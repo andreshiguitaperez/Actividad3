@@ -50,5 +50,35 @@ pipeline {
                 version: '0.0.1-SNAPSHOT'
             }
         }
+	stage('Deploy to Tomcat') {
+            steps {
+                script {
+                    
+                    def nexusUrl = 'https://6a86-181-128-31-248.ngrok-free.app'
+                    def nexusUsername = 'andreshiguita' 
+                    def nexusPassword = 'Andres10' 
+                    def nexusRepository = 'app-prueba' 
+                    def nexusGroupId = 'co.udea.hero.api' 
+                    def nexusArtifactId = 'tour-hero-api' 
+                    def nexusVersion = '0.0.1-SNAPSHOT'
+                    
+                    def warFileName = "${nexusArtifactId}-${nexusVersion}.war"
+                    def warFilePath = "${nexusGroupId.replace('.', '/')}/${nexusArtifactId}/${nexusVersion}/${warFileName}"
+                    
+                    sh "curl -u ${nexusUsername}:${nexusPassword} -o ${warFileName} ${nexusUrl}/repository/${nexusRepository}/${warFilePath}"
+                    
+                    def warFile = "target/tour-hero-api-0.0.1-SNAPSHOT.war" 
+                    
+                    def tomcatUrl = 'https://f094-181-128-31-248.ngrok-free.app' 
+                    def tomcatUsername = 'admin' 
+                    def tomcatPassword = 'admin' 
+                    def tomcatAuth = "${tomcatUsername}:${tomcatPassword}"
+                    def tomcatContextPath = '/tour-hero-api' 
+                    
+                    sh "curl -u ${tomcatAuth} --upload-file ${warFile} '${tomcatUrl}/manager/text/deploy?path=${tomcatContextPath}&update=true'"
+                }
+            }
+        }
     }
 }
+
