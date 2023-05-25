@@ -54,7 +54,7 @@ pipeline {
             steps {
                 script {
                     
-                    def nexusUrl = 'https://6a86-181-128-31-248.ngrok-free.app'
+                    def nexusUrl = 'https://2662-190-60-254-222.ngrok-free.app'
                     def nexusUsername = 'andreshiguita' 
                     def nexusPassword = 'Andres10' 
                     def nexusRepository = 'app-prueba' 
