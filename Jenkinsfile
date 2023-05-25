@@ -43,7 +43,7 @@ pipeline {
                 ],
                 credentialsId: 'nexusCredentials',
                 groupId: 'co.udea.hero.api',
-                nexusUrl: '6a86-181-128-31-248.ngrok-free.app',
+                nexusUrl: '2662-190-60-254-222.ngrok-free.app',
                 nexusVersion: 'nexus3',
                 protocol: 'https',
                 repository: 'app-prueba',
@@ -69,7 +69,7 @@ pipeline {
                     
                     def warFile = "target/tour-hero-api-0.0.1-SNAPSHOT.war" 
                     
-                    def tomcatUrl = 'https://f094-181-128-31-248.ngrok-free.app' 
+                    def tomcatUrl = 'https://97d9-190-60-254-222.ngrok-free.app' 
                     def tomcatUsername = 'admin' 
                     def tomcatPassword = 'admin' 
                     def tomcatAuth = "${tomcatUsername}:${tomcatPassword}"
